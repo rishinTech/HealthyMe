@@ -1,0 +1,55 @@
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: #fff8f3;
+    text-align:center;
+}
+
+h1 {
+    color:#ff8c69;
+}
+
+.centered {
+    margin-top:150px;
+}
+
+input, select {
+    display:block;
+    margin:10px auto;
+    padding:8px;
+    border-radius:8px;
+    border:none;
+    width:220px;
+}
+
+button {
+    background:#ff8c69;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover {
+    background:#ff7043;
+    transform:scale(1.05);
+}
+
+.tabs {
+    margin:20px;
+}
+
+.tabContent {
+    background:#ffe5d9;
+    padding:20px;
+    width:300px;
+    margin:20px auto;
+    border-radius:12px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+#foodList {
+    margin-top:10px;
+}

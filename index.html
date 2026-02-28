@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Healthy Me!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loginPage" class="centered">
+    <h1>Healthy Me!</h1>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Enter</button>
+</div>
+
+<div id="app" style="display:none;">
+    <h1>Healthy Me!</h1>
+
+    <div class="tabs">
+        <button onclick="showTab('bmiTab')">BMI</button>
+        <button onclick="showTab('calorieTab')">Calories</button>
+        <button onclick="showTab('progressTab')">Progress</button>
+    </div>
+
+    <!-- BMI TAB -->
+    <div id="bmiTab" class="tabContent">
+        <h2>BMI Calculator</h2>
+
+        <select id="weightUnit">
+            <option value="kg">Kg</option>
+            <option value="lbs">Pounds</option>
+        </select>
+
+        <input type="number" id="weight" placeholder="Weight">
+
+        <select id="heightUnit">
+            <option value="cm">Cm</option>
+            <option value="ft">Feet/Inches</option>
+        </select>
+
+        <input type="number" id="height" placeholder="Height">
+        <input type="number" id="inches" placeholder="Inches (if feet selected)">
+
+        <button onclick="calculateBMI()">Calculate BMI</button>
+
+        <p id="bmiResult"></p>
+        <p id="targetCalories"></p>
+    </div>
+
+    <!-- CALORIE TAB -->
+    <div id="calorieTab" class="tabContent" style="display:none;">
+        <h2>Daily Food Tracker</h2>
+
+        <input type="text" id="foodName" placeholder="Food item">
+        <input type="number" id="foodCalories" placeholder="Calories">
+        <button onclick="addFood()">Add Food</button>
+
+        <div id="foodList"></div>
+        
+
+        <h3>Total Calories Today:</h3>
+        <p id="totalCalories">0</p>
+        <a href="https://www.webmd.com/diet/healthtool-food-calorie-counter" target="_blank">Tap here to know calorie</a>
+        <br><br>
+        <button onclick="resetCalories()">Reset Today</button>
+    </div>
+    
+    <!-- PROGRESS TAB -->
+    <div id="progressTab" class="tabContent" style="display:none;">
+        <h2>Daily Progress</h2>
+        <p id="progressMessage"></p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
