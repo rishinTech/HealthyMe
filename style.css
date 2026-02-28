@@ -1,55 +1,121 @@
+/* ================= BASE ================= */
 body {
-    margin:0;
+    margin: 0;
     font-family: Arial, sans-serif;
     background: #fff8f3;
-    text-align:center;
+    text-align: center;
+    padding: 20px;
 }
 
 h1 {
-    color:#ff8c69;
+    color: #ff8c69;
+    margin-bottom: 20px;
 }
 
+h2 {
+    margin-bottom: 15px;
+}
+
+/* ================= LOGIN ================= */
 .centered {
-    margin-top:150px;
+    max-width: 400px;
+    margin: 100px auto;
 }
 
+/* ================= INPUTS ================= */
 input, select {
-    display:block;
-    margin:10px auto;
-    padding:8px;
-    border-radius:8px;
-    border:none;
-    width:220px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
+/* ================= BUTTONS ================= */
 button {
-    background:#ff8c69;
-    color:white;
-    border:none;
-    padding:10px 20px;
-    border-radius:8px;
-    cursor:pointer;
-    transition:0.3s;
+    background: #ff8c69;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    transition: 0.3s ease;
 }
 
 button:hover {
-    background:#ff7043;
-    transform:scale(1.05);
+    background: #ff7043;
+    transform: scale(1.03);
 }
 
+/* ================= TABS ================= */
 .tabs {
-    margin:20px;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
+/* ================= CARD STYLE ================= */
 .tabContent {
-    background:#ffe5d9;
-    padding:20px;
-    width:300px;
-    margin:20px auto;
-    border-radius:12px;
-    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    background: #ffe5d9;
+    padding: 20px;
+    width: 90%;
+    max-width: 450px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
 }
 
+/* ================= FOOD LIST ================= */
 #foodList {
-    margin-top:10px;
+    margin-top: 15px;
+}
+
+#foodList div {
+    background: white;
+    padding: 8px;
+    margin: 6px 0;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* ================= LINKS ================= */
+a {
+    color: #ff7043;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ================= MOBILE OPTIMIZATION ================= */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .tabContent {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 13px;
+    }
 }
