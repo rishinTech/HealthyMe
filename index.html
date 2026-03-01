@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthy Me!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- LOGIN PAGE -->
+    <!-- ================= LOGIN PAGE ================= -->
     <div id="loginPage" class="centered">
         <h1>Healthy Me!</h1>
 
@@ -20,20 +20,21 @@
     </div>
 
 
-    <!-- MAIN APP -->
+    <!-- ================= MAIN APP ================= -->
     <div id="app" style="display:none;">
 
         <h1>Healthy Me!</h1>
 
-        <!-- TABS -->
+        <!-- ================= TABS ================= -->
         <div class="tabs">
             <button onclick="showTab('bmiTab')">BMI</button>
             <button onclick="showTab('calorieTab')">Calories</button>
             <button onclick="showTab('progressTab')">Progress</button>
+            <button onclick="showTab('historyTab')">History</button>
         </div>
 
 
-        <!-- BMI TAB -->
+        <!-- ================= BMI TAB ================= -->
         <div id="bmiTab" class="tabContent">
             <h2>BMI Calculator</h2>
 
@@ -46,7 +47,7 @@
 
             <select id="heightUnit">
                 <option value="cm">Centimeters (cm)</option>
-                <option value="ft">Feet & Inches</option>
+                <option value="ft">Feet</option>
             </select>
 
             <input type="number" id="height" placeholder="Enter Height">
@@ -59,12 +60,18 @@
         </div>
 
 
-        <!-- CALORIE TAB -->
+        <!-- ================= CALORIE TAB ================= -->
         <div id="calorieTab" class="tabContent" style="display:none;">
             <h2>Daily Food Tracker</h2>
 
             <input type="text" id="foodName" placeholder="Food item">
             <input type="number" id="foodCalories" placeholder="Calories">
+
+            <!-- Healthy / Unhealthy Selection -->
+            <select id="foodType">
+                <option value="healthy">Healthy</option>
+                <option value="unhealthy">Unhealthy</option>
+            </select>
 
             <button onclick="addFood()">Add Food</button>
 
@@ -72,6 +79,14 @@
 
             <h3>Total Calories Today:</h3>
             <p id="totalCalories">0</p>
+
+            <h4>Healthy Calories:</h4>
+            <p id="healthyCalories">0</p>
+
+            <h4>Unhealthy Calories:</h4>
+            <p id="unhealthyCalories">0</p>
+
+            <br>
 
             <a href="https://www.webmd.com/diet/healthtool-food-calorie-counter" 
                target="_blank">
@@ -84,10 +99,21 @@
         </div>
 
 
-        <!-- PROGRESS TAB -->
+        <!-- ================= PROGRESS TAB ================= -->
         <div id="progressTab" class="tabContent" style="display:none;">
             <h2>Daily Progress</h2>
             <p id="progressMessage"></p>
+        </div>
+
+
+        <!-- ================= HISTORY TAB ================= -->
+        <div id="historyTab" class="tabContent" style="display:none;">
+            <h2>History</h2>
+
+            <input type="date" id="historyDate">
+            <button onclick="viewHistory()">View</button>
+
+            <div id="historyResult"></div>
         </div>
 
     </div>
